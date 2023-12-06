@@ -37,7 +37,6 @@ func main() {
 	dbPort := os.Getenv("DB_PORT")
 	dsn := fmt.Sprintf("user=%s dbname=%s password=%s host=%s port=%s sslmode=disable", dbUser, dbName, dbPass, dbHost, dbPort)
 	db, err := sql.Open(driver, dsn)
-	fmt.Println(dsn)
 	if err != nil {
 		log.Println(fmt.Errorf("failed to connect to the db - %s", err.Error()))
 		return
