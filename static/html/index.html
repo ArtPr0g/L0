@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Таблица данных</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input type="text" id="IDInput">
+    <button>Отправить запрос</button>
+</form>
+<table id="orders">
+    <caption>Таблица данных заказов</caption>
+    <tr>
+        <th>order_uid</th>
+        <th>track_number</th>
+        <th>entry</th>
+        <th>locale</th>
+        <th>internal_signature</th>
+        <th>customer_id</th>
+        <th>delivery_service</th>
+        <th>shardkey</th>
+        <th>sm_id</th>
+        <th>date_created</th>
+        <th>oof_shard</th>
+    </tr>
+    <!-- Здесь могут быть строки таблицы с данными -->
+</table>
+<table id="delivery">
+    <caption>Таблица данных доставки</caption>
+    <tr>
+        <th>name</th>
+        <th>phone</th>
+        <th>zip</th>
+        <th>city</th>
+        <th>address</th>
+        <th>region</th>
+        <th>email</th>
+    </tr>
+    <!-- Здесь могут быть строки таблицы с данными -->
+</table>
+<table id="payment">
+    <caption>Таблица данных платежей</caption>
+    <tr>
+        <th>transaction</th>
+        <th>request_id</th>
+        <th>currency</th>
+        <th>provider</th>
+        <th>amount</th>
+        <th>payment_dt</th>
+        <th>bank</th>
+        <th>delivery_cost</th>
+        <th>goods_total</th>
+        <th>custom_fee</th>
+    </tr>
+    <!-- Здесь могут быть строки таблицы с данными -->
+</table>
+<table id="items">
+    <caption>Таблица данных товаров</caption>
+    <tr>
+        <th>chrt_id</th>
+        <th>track_number</th>
+        <th>price</th>
+        <th>rid</th>
+        <th>name</th>
+        <th>sale</th>
+        <th>size</th>
+        <th>total_price</th>
+        <th>nm_id</th>
+        <th>brand</th>
+        <th>status</th>
+    </tr>
+    <!-- Здесь могут быть строки таблицы с данными -->
+</table>
+<script src="../js/request.js"></script>
+</body>
+</html>

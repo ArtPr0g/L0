@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432 # Открываем порт для доступа к БД с хост-машины
+    environment:
+      POSTGRES_USER: wb_user # Имя пользователя для подключения к БД
+      POSTGRES_PASSWORD: wb_pass # Пароль пользователя
+      POSTGRES_DB: wb_db # Название базы данных, которую нужно создать
+    volumes: # часть настроек для хранения данных, пока для нас это не важно
+      - type: volume
+        source: postgresdb-data
+        target: /var/lib/postgresql/data
+volumes: # часть настроек для хранения данных
+  postgresdb-data:
+    driver: local
+
